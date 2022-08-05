@@ -1,0 +1,30 @@
+:root {
+  --white: #ffffff;
+  --grey-850: #252525;
+  --blue-200: #6abfd0;
+  --orange: #F9810F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, textarea, input {
+  font: 400 16px "Maven Pro", sans-serif;
+  color: var(--grey-850);
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}

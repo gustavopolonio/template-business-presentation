@@ -1,0 +1,60 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+header {
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 13px 30px -12px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.logo-company {
+  width: 216px;
+  height: auto;
+}
+
+.nav-bar-section ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-section ul li+li {
+  margin-left: 32px;
+}
+
+.nav-bar-section a {
+  padding: 8px;
+  /* font-size: 15px; */
+  font-weight: 700;
+  color: var(--grey-850);
+
+  transition: 0.2s;
+}
+
+.nav-bar-section a:hover {
+  color: var(--orange);
+}
+
+.budget-button {
+  /* margin-left: auto; */
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 32px;
+  padding: 12px 24px;
+
+  transition: 0.2s;
+}
+
+.budget-button:hover {
+  background: var(--white);
+  color: var(--orange);
+}
