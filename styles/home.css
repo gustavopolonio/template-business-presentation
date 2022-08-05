@@ -111,14 +111,18 @@ header {
   margin-bottom: 100px;
 }
 
-.informative-container-title {
+.informative-container-title,
+.specialties-title,
+.highlighted-services-title  {
   font-size: 32px;
   line-height: 34px;
   margin-bottom: 60px;
   position: relative;
 }
 
-.informative-container-title:before {
+.informative-container-title:before,
+.specialties-title:before,
+.highlighted-services-title:before {
   content: "";
   position: absolute;
   top: 140%;
@@ -129,7 +133,9 @@ header {
   border-radius: 50%;
 }
 
-.informative-container-title:after {
+.informative-container-title:after,
+.specialties-title:after,
+.highlighted-services-title:after {
   content: "";
   position: absolute;
   top: 146%;
@@ -220,4 +226,101 @@ header {
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+.specialties-container {
+  padding: 80px 0;
+  background-image: url("../assets/specialties-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  background-attachment: fixed;
+
+  position: relative;
+  z-index: 1;
+}
+
+.specialties-container:before {
+  content: "";
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.82) none repeat scroll 0 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.specialties-title {
+  color: var(--white);
+}
+
+.specialties-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 41px 30px;
+}
+
+.specialties-items li {
+  width: 370px;
+}
+
+.specialties-items img {
+  width: 100%;
+  height: auto;
+}
+
+.specialties-items li h3 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 8px;
+}
+
+.specialties-items li h3 span {
+  color: var(--orange);
+}
+
+.highlighted-services {
+  max-width: 1440px;
+  margin: 80px auto;
+  width: 96%;
+}
+
+.highlighted-services ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.highlighted-services ul li {
+  position: relative;
+  max-width: 430px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.highlighted-services ul li:hover {
+  filter: brightness(0.6);
+}
+
+.highlighted-services ul li:hover .search-icon {
+  opacity: 1;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+}
+
+img.search-icon {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: 0.2s;
 }
