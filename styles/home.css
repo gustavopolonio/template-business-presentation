@@ -324,3 +324,110 @@ img.search-icon {
 
   transition: 0.2s;
 }
+
+footer {
+  background: var(--grey-900);
+  padding: 78px 0;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-content {
+  margin-right: 30px;
+  max-width: 380px;
+}
+
+.logo-company-footer {
+  color: var(--orange);
+  font-size: 42px;
+}
+
+.company-description {
+  color: var(--grey-200);
+  line-height: 28px;
+  margin: 28px 0;
+}
+
+.more-info li {
+  display: flex;
+  align-items: center;
+}
+
+.more-info li:last-of-type {
+  align-items: flex-start;
+}
+
+.more-info li+li {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--grey-825);
+}
+
+.more-info li span {
+  color: var(--orange-500);
+}
+
+.more-info li p {
+  color: var(--grey-150);
+  margin-left: 8px;
+  line-height: 28px;
+}
+
+.social-media {
+  margin-top: 28px;
+}
+
+.social-media h3 {
+  /* color: var(--grey-200); */
+  color: var(--orange-500);
+}
+
+.social-media ul {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.social-media ul li svg {
+  transition: 0.2s;
+}
+
+.social-media ul li:hover svg {
+  fill: var(--orange);
+}
+
+.social-media ul li+li {
+  margin-left: 54px;
+}
+
+footer iframe {
+  display: flex;
+  flex: 1;
+}
+
+.footer-bottom-area {
+  background: var(--grey-950);
+  padding: 22px 0;
+}
+
+.footer-bottom-area-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rights {
+  color: var(--grey-150);
+}
+
+.developed-by {
+  color: var(--grey-150);
+  font-size: 12px;
+}
+
+.developed-by b {
+  font-size: 16px;
+  font-family: "Oleo Script";
+}
