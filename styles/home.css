@@ -179,7 +179,7 @@ header {
   color: var(--white);
   background: var(--orange);
   border: none;
-  padding: 15px 30px;
+  padding: 15px 22px;
   border-radius: 6px;
 
   transition: 0.2s;
@@ -187,6 +187,10 @@ header {
 
 .informative-text-footer button:hover {
   background-color: var(--orange-500);
+}
+
+.informative-text-footer > span {
+  margin-left: 8px;
 }
 
 .informative-text-footer span {
@@ -262,7 +266,7 @@ header {
 }
 
 .specialties-items li {
-  width: 370px;
+  width: 100%;
 }
 
 .specialties-items img {
@@ -427,7 +431,80 @@ footer iframe {
   font-size: 12px;
 }
 
+.back-to-top-button {
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 2;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: rgb(27, 27, 27) 0px 8px 23px -6px;
+
+  transition: 0.2s;
+}
+
+.back-to-top-button:hover {
+  filter: brightness(0.8);
+}
+
+.back-to-top-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top-button span {
+  font-size: 30px;
+  color: var(--white);
+}
+
 .developed-by b {
   font-size: 16px;
   font-family: "Oleo Script";
+}
+
+
+@media (max-width: 1122px) {
+  .nav-bar-section ul li+li {
+    margin-left: 24px;
+  }
+
+  .informative-text-footer button {
+    padding: 14px 16px;
+    width: 120px;
+  }
+
+  .informative-text-footer span,
+  .informative-text-footer span.highlited {
+    font-size: 18px;
+  }
+
+  .footer-content {
+    margin-right: 16px;
+  }
+
+  .footer-bottom-area {
+    padding: 18px 0;
+  }
+
+  .footer-bottom-area-content {
+    flex-direction: column;
+  }
+
+  .developed-by {
+    margin-top: 8px;
+  }
+
+  .back-to-top-button {
+    right: 16px;
+    bottom: 25px;
+  }
 }

@@ -1,0 +1,98 @@
+.modal-overlay {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-container {
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 700px;
+  width: 60%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.modal-container.show {
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 700px;
+  padding: 20px;
+  width: 100%;
+}
+
+.modal-content img {
+  max-width: 660px;
+  width: 100%;
+  height: auto;
+}
+
+.modal-previous-button,
+.modal-next-button,
+.modal-close-button {
+  position: absolute;
+  transition: 0.2s;
+}
+
+.modal-previous-button:hover,
+.modal-next-button:hover,
+.modal-close-button:hover {
+  background: var(--orange-500);
+}
+
+.modal-previous-button,
+.modal-next-button,
+.modal-close-button {
+  border-radius: 50%;
+  border: none;
+  background: var(--orange);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.modal-previous-button span,
+.modal-next-button span {
+  font-size: 44px;
+}
+
+.modal-previous-button {
+  left: -4%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-next-button {
+  right: -4%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-close-button {
+  right: -3%;
+  top: -3%;
+}
+
+.modal-close-button span {
+  font-size: 28px;
+}
