@@ -93,3 +93,9 @@ $highlightedServicesImages.forEach(image => {
   })
 })
 
+
+// Toggle menu hamburgueur
+const $menuHambButton = document.querySelector(".menu-hamb-button")
+$menuHambButton.addEventListener("click", () => {
+  document.querySelector(".nav-bar-section > ul").classList.toggle("show")
+})
