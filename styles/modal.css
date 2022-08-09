@@ -96,3 +96,9 @@
 .modal-close-button span {
   font-size: 28px;
 }
+
+@media (max-width: 960px) {
+  .modal-container {
+    width: 88%;
+  }
+}

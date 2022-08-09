@@ -98,4 +98,5 @@ $highlightedServicesImages.forEach(image => {
 const $menuHambButton = document.querySelector(".menu-hamb-button")
 $menuHambButton.addEventListener("click", () => {
   document.querySelector(".nav-bar-section > ul").classList.toggle("show")
+  $menuHambButton.classList.toggle("close")
 })

@@ -44,11 +44,17 @@ li {
   .hide-on-desktop {
     display: none;
   }
+  .hide-on-mobile {
+    display: block;
+  }
 }
 
 @media (max-width: 960px) {
   .hide-on-desktop {
     display: block;
+  }
+  .hide-on-mobile {
+    display: none;
   }
 }
 
