@@ -95,8 +95,39 @@ $highlightedServicesImages.forEach(image => {
 
 
 // Toggle menu hamburgueur
+const $body = document.body
+const $header = document.querySelector("header")
+const $navBarUl = document.querySelector(".nav-bar-section > ul")
 const $menuHambButton = document.querySelector(".menu-hamb-button")
+
 $menuHambButton.addEventListener("click", () => {
-  document.querySelector(".nav-bar-section > ul").classList.toggle("show")
+  $navBarUl.classList.toggle("show")
   $menuHambButton.classList.toggle("close")
+
+  const menuOverlay = document.querySelector(".menu-overlay")
+
+  if (!menuOverlay) {
+    const newMenuOverlay = document.createElement("div")
+    newMenuOverlay.classList.add("menu-overlay")
+  
+    $body.insertBefore(newMenuOverlay, $header)
+
+    newMenuOverlay.addEventListener("click", () => {
+      newMenuOverlay.remove()
+      $navBarUl.classList.remove("show")
+      $menuHambButton.classList.remove("close")
+    })
+
+    const $navBarItems = $navBarUl.querySelectorAll("li a")
+    $navBarItems.forEach(item => item.addEventListener("click", () => {
+      newMenuOverlay.remove()
+      $navBarUl.classList.remove("show")
+      $menuHambButton.classList.remove("close")
+    }))
+
+  } else {
+    // Close menu hamb
+    menuOverlay.remove()
+  }
+
 })
