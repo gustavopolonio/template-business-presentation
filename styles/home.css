@@ -411,7 +411,7 @@ footer {
 .social-media ul {
   display: flex;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .social-media ul li svg {
@@ -598,7 +598,8 @@ footer iframe {
   .nav-bar-section > ul.show {
     opacity: 1;
     top: 100%;
-    transform: translate(0)
+    transform: translate(0);
+    border-top: outset;
   }
 
   .nav-bar-section > ul li {
@@ -654,6 +655,7 @@ footer iframe {
   .main-banner-content p {
     margin: 0 auto;
     font-size: 18px;
+    max-width: 100%;
   }
 
   .informative-container {
@@ -665,6 +667,7 @@ footer iframe {
     font-size: 23px;
     margin-bottom: 24px;
     text-align: center;
+    line-height: 26px;
   }
 
   .informative-content {
@@ -739,7 +742,7 @@ footer iframe {
   }
 
   .company-description {
-    margin: 18px 0;
+    margin: 18px 0 24px;
   }
 
   .more-info li,
