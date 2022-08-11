@@ -50,6 +50,7 @@ $highlightedServicesImages.forEach(image => {
       modalContainer.classList.add("show")
     }, 150)
 
+    document.body.classList.add("no-scroll")
 
     // Close modal
     document.addEventListener("keydown", (e) => {
@@ -57,12 +58,14 @@ $highlightedServicesImages.forEach(image => {
       if (key === "Escape") {
         modalContainer.remove()
         modalOverlay.remove()
+        document.body.classList.remove("no-scroll")
       }
     })
     if (modalOverlay && closeButton) {
       [modalOverlay, closeButton].forEach(button => button.addEventListener("click", () => {
         modalContainer.remove()
         modalOverlay.remove()
+        document.body.classList.remove("no-scroll")
       }))
     }
 
@@ -103,6 +106,7 @@ const $menuHambButton = document.querySelector(".menu-hamb-button")
 $menuHambButton.addEventListener("click", () => {
   $navBarUl.classList.toggle("show")
   $menuHambButton.classList.toggle("close")
+  document.body.classList.toggle("no-scroll")
 
   const menuOverlay = document.querySelector(".menu-overlay")
 
@@ -116,6 +120,7 @@ $menuHambButton.addEventListener("click", () => {
       newMenuOverlay.remove()
       $navBarUl.classList.remove("show")
       $menuHambButton.classList.remove("close")
+      document.body.classList.remove("no-scroll")
     })
 
     const $navBarItems = $navBarUl.querySelectorAll("li a")
@@ -123,6 +128,7 @@ $menuHambButton.addEventListener("click", () => {
       newMenuOverlay.remove()
       $navBarUl.classList.remove("show")
       $menuHambButton.classList.remove("close")
+      document.body.classList.remove("no-scroll")
     }))
 
   } else {

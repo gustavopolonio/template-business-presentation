@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 body, button, textarea, input {
   font: 400 16px "Maven Pro", sans-serif;
   color: var(--grey-850);
